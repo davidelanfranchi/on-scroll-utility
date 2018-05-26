@@ -1,0 +1,76 @@
+/* 
+Smooth Scrollbar helper functions
+https://github.com/idiotWu/smooth-scrollbar
+*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  /* height: 100%; */
+  margin: 0;
+}
+
+@media (min-width: 1025px) {
+  #my-scrollbar[data-scrollbar="true"] {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+.scroller {
+  /* width: 500vw; */
+  padding: 5vw;
+}
+
+.f-p-element {
+  width: 30vw;
+  height: 40vh;
+  background-color: beige;
+  margin-bottom: 10vh;
+  transition: background-color 1s;
+}
+.f-p-element:nth-child(even) {
+  margin-left: 30vh;
+}
+
+.f-p-element:nth-child(4) {
+  margin-left: 10vw;
+}
+.f-p-element:nth-child(8) {
+  margin-left: 20vw;
+}
+.f-p-element:nth-child(12) {
+  margin-left: 30vw;
+}
+
+.is-in-viewport {
+  background-color: darkslategrey;
+}
+[data-os-v-parallax] {
+  background-color: rgb(226, 151, 10);
+}
+[data-os-v-progress] {
+  background-color: rgb(10, 111, 226);
+}
+
+.is-stick-to-top {
+  background-color: rgb(190, 105, 190);
+  z-index: 10;
+}
+
+[data-os-stick-parent] {
+  position: relative;
+}
+
+.has-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' version='1' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M0 0h60v60H0z'/%3E%3Ccircle fill='%23D6D6D6' cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 2.5vw auto;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Smooth On Scroll Utility</title>
+  <link rel="stylesheet" href="on-scroll-utility.css">
+
+</head>
+
+<body class="has-bg">
+
+  <div id="my-scrollbar">
+    <div class="scroller">
+
+      <div data-os-stick-parent="one">
+
+        <h1>Data attributes:</h1>
+        <p>Idea: define the same on scroll behaviour using smoothScrollbar on large devices and document scroll on small ones</p>
+        <ul>
+          <li>
+            <strong>data-os:</strong>attach watcher;
+          </li>
+          <li>
+            <strong>data-os-offset:</strong>override default offset (pixels);
+          </li>
+          <li>
+            <strong>data-os-action:</strong>define a function to trigger (class method, extendeded class method);
+          </li>
+          <li>
+            <strong>data-os-once:</strong>watch element once;
+          </li>
+          <li>
+            <strong>data-os-v-parallax:</strong>add vertical parallax effect;
+          </li>
+          <li>
+            <strong>data-os-h-parallax:</strong>add horizontal parallax effect;
+          </li>
+        </ul>
+        <div class="f-p-element -0" data-os></div>
+        <div class="f-p-element -1" data-os data-os-stick-to-bottom data-os-stick-to-bottom-parent="one"></div>
+        <div class="f-p-element -2" data-os data-os-stick-to-top data-os-stick-to-top-parent="one"></div>
+        <div class="f-p-element -3" data-os data-os-v-progress-action="logProgress"></div>
+        <div class="f-p-element -4" data-os></div>
+
+      </div>
+
+      <div class="f-p-element -5" data-os></div>
+      <div class="f-p-element -6" data-os></div>
+      <div class="f-p-element -7" data-os data-os-offset="100" data-os-once></div>
+      <div class="f-p-element -8" data-os data-os-v-parallax=".2"></div>
+      <div class="f-p-element -9" data-os data-os-v-parallax data-os-action="behaviour2"></div>
+      <div class="f-p-element -10" data-os></div>
+      <div class="f-p-element -11" data-os data-os-offset="100" data-os-once></div>
+      <div class="f-p-element -12" data-os></div>
+      <div class="f-p-element -13" data-os></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.2.7/smooth-scrollbar.js"></script>
+  <script src="on-scroll-utility.js"></script>
+
+  <script>
+
+    var fancyScrolling = new customFancyScrolling({
+      smoothScrollbar: window.Scrollbar,
+      smoothScrollbarContainer: document.querySelector("#my-scrollbar"),
+      breakPoint: 1025
+    });
+
+  </script>
+
+
+</body>
+
+</html>
